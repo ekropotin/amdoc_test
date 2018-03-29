@@ -1,34 +1,31 @@
 import React from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
-import ContIn from 'containers/ContIn';
-import ContOut from 'containers/ContOut';
+import Cards from 'containers/Cards';
+import Homepage from 'components/homepage/Homepage';
 
 import './PageLayout.scss';
 
-const ButtonIn = withRouter(({ history }) => (
-  <Button bsStyle='primary' onClick={() => { history.push('/contin'); }}>/contin</Button>
+const ButtonToHome = withRouter(({ history }) => (
+  <Button bsStyle='primary' onClick={() => { history.push('/'); }}>/Home</Button>
 ));
 
-const ButtonOut = withRouter(({ history }) => (
-  <Button bsStyle='primary' onClick={() => { history.push('/contout'); }}>/contout</Button>
+const ButtonToCards = withRouter(({ history }) => (
+  <Button bsStyle='primary' onClick={() => { history.push('/usercards'); }}>/cards</Button>
 ));
 
-const PageLayout = () => (
+export default () => (
   <div className='container'>
     <div className='page-layout__viewport'>
-      <ButtonGroup className='page-layout__buttons'>
-        <ButtonIn />
-        <ButtonOut />
-      </ButtonGroup>
+
+      <ButtonToHome />
+      <ButtonToCards />
 
       <Switch>
-        <Route path='/contin' component={ContIn} />
-        <Route path='/contout' component={ContOut} />
+        <Route path='/' exact component={Homepage} />
+        <Route path='/usercards' component={Cards} />
       </Switch>
     </div>
   </div>
 );
-
-export default PageLayout;

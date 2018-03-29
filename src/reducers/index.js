@@ -1,15 +1,9 @@
 import { combineReducers } from 'redux';
 
-import stored_selection from './storedSelection';
-import stored_value from './storedValue';
+import userCards from './userCards';
 
 export const makeRootReducer = () => {
-  return combineReducers(
-    {
-      stored_selection,
-      stored_value
-    }
-  );
+  return combineReducers({ userCards });
 };
 
 export default makeRootReducer;

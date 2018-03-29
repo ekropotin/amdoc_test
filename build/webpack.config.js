@@ -15,6 +15,7 @@ const config = {
   entry: {
     main: [
       'react-hot-loader/patch',
+      'whatwg-fetch',
       inProjectSrc(project.main)
     ]
   },
