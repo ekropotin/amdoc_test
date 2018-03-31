@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default () => (
-  <h1>HOMEPAGE</h1>
+  <h1>Hello, Amdocs!</h1>
 );

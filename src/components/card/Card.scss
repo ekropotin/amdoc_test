@@ -1,0 +1,32 @@
+.c-usercard {
+    //flex: 0 1 24%;
+    border: 2px black solid;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    &:not(.c-usercard--editmode):hover {
+        cursor: pointer;
+    }
+
+    .c-usercard__header {
+        padding: 0 0 0 0;
+        background-color: #b5d7e4;
+        white-space: nowrap;
+        font-size: 20px;
+    }
+
+    .c-usercard__content {
+        background-color: blue;
+        padding: 5px;
+        color: white;
+
+        span, input {
+            text-overflow: ellipsis;
+            display: block;
+            overflow: hidden;
+        }
+
+    }
+
+}

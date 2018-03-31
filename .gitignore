@@ -6,5 +6,3 @@ coverage
 .idea/
 .yarn-cache
 *.sublime-workspace
-package-lock.json
-TODO
